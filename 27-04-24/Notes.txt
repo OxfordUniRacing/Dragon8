@@ -1,0 +1,11 @@
+Must send control word 0xFF for anything to happen
+
+
+Found this extended diagnostics page:
+	https://zeromanual.com/wiki/Gen2/Motor_Controller/CAN_Diagnostics
+	Got 0x52C3 error code (Current Control Fault)  when spinning the motor when "active'
+		Means that the inverter had no control over the current through the inverter (not neccessarily overcurrent)
+		However, the powersupply overcurrent did also trip
+		CAN Diagnostics page inidicate to check both:
+			Motor load and wiring (pretty confident its correct)
+			controller programming (confident it isn't correct)
